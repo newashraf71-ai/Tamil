@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: tamil-vip-store
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@tamilvip.store
+      - key: ADMIN_PASSWORD
+        sync: false
